@@ -88,10 +88,20 @@ public class FirstApp {
     }
 
     public static void perePolnenie(){
-        System.out.println("Пример переполнения");
+        System.out.println("Пример переполнения int");
         int value = Integer.MAX_VALUE-1; for(int i = 0; i < 4; i++, value++) { System.out.println(value); }
 
     }
+
+    public static void perePolnenie2(){
+        byte myByte=1;
+        System.out.println("Пример переполнения byte");
+        System.out.println("byte min = " + Byte.MAX_VALUE);
+        // myByte= Byte.MAX_VALUE + 1;
+        System.out.println("byte min = " + Byte.MIN_VALUE);
+        // myByte= Byte.MIN_VALUE - 1;
+    }
+
 
     static int getMaxIntNumber() {
         return Integer.MAX_VALUE;
