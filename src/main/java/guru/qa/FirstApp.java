@@ -19,7 +19,7 @@ public class FirstApp {
     public FirstApp() {
         symbol = 'm'; // Character
         flag = true;  // Boolean
-        aByte = 123; //128 to 127
+        aByte = 123; //-128 to 127
         aShort = 15; // -32,768 to 32,767
         aInt = 200000;  //2,147,483,648 to 2,147,483,647
         boxed = 1;
@@ -71,9 +71,11 @@ public class FirstApp {
         System.out.println("Вычитяние " + b + " из " + c + " = " + subtraction(b, c));
         System.out.println("Умножение " + b + " на " + c + " = " + multiplication(b, c));
         System.out.println("Деление " + c + " на " + b + " = " + division((int) c, b));
-        Byte newByte = 123;
+        Byte newByte = 127;
+        newByte++;
         int newInt = newByte + newByte;
         System.out.println("Byte+Byte=" + newInt);
+        perePolnenie();
         printArray();
     }
 
@@ -83,6 +85,12 @@ public class FirstApp {
         for (int i : array) {
             System.out.print(i + " ");
         }
+    }
+
+    public static void perePolnenie(){
+        System.out.println("Пример переполнения");
+        int value = Integer.MAX_VALUE-1; for(int i = 0; i < 4; i++, value++) { System.out.println(value); }
+
     }
 
     static int getMaxIntNumber() {
